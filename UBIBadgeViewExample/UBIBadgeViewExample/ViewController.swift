@@ -9,17 +9,28 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var centerAlignedBadge: UBIBadgeView!
+    @IBOutlet weak var leftAlignedBadge: UBIBadgeView!
+    @IBOutlet weak var rightAlignedBadge: UBIBadgeView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.centerAlignedBadge.alignment = .center
+        self.leftAlignedBadge.alignment = .left
+        self.rightAlignedBadge.alignment = .right
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func textFieldEditingChanged(_ sender: AnyObject) {
+        guard let textField = sender as? UITextField else {
+            return
+        }
+        
+        let value = Int(textField.text ?? "0") ?? 0
+        
+        self.centerAlignedBadge.value = value
+        self.leftAlignedBadge.value = value
+        self.rightAlignedBadge.value = value
     }
-
-
 }
 

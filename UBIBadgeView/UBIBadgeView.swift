@@ -9,22 +9,22 @@ import UIKit
 
 @objc(UBIBadgeView)
 @IBDesignable
-class UBIBadgeView: UIView {
+open class UBIBadgeView: UIView {
     private let frameView: UIView = UIView()
     private let label = UBIBadgeViewLabel()
     
-    enum Alignment {
+    public enum Alignment {
         case center
         case left
         case right
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
@@ -49,74 +49,74 @@ class UBIBadgeView: UIView {
         self.frameView.layer.borderWidth = self.borderWidth
     }
     
-    var font: UIFont = UIFont(name: "Helvetica-Bold", size: 15.0)! {
+    public var font: UIFont = UIFont(name: "Helvetica-Bold", size: 15.0)! {
         didSet {
             self.label.font = font
             self.label.sizeToFit()
         }
     }
     
-    @IBInspectable var textColor: UIColor = .white {
+    @IBInspectable public var textColor: UIColor = .white {
         didSet {
             self.label.textColor = textColor
         }
     }
     
-    @IBInspectable var value: Int = 0 {
+    @IBInspectable public var value: Int = 0 {
         didSet {
             self.updateText()
         }
     }
     
-    @IBInspectable var frameBackgroundColor: UIColor = .orange {
+    @IBInspectable public var frameBackgroundColor: UIColor = .orange {
         didSet {
             self.frameView.layer.backgroundColor = frameBackgroundColor.cgColor
         }
     }
     
-    @IBInspectable var frameBorderColor: UIColor = .white {
+    @IBInspectable public var frameBorderColor: UIColor = .white {
         didSet {
             self.frameView.layer.borderColor = frameBorderColor.cgColor
         }
     }
     
-    @IBInspectable var cornerRadius: CGFloat = 10.5 {
+    @IBInspectable public var cornerRadius: CGFloat = 10.5 {
         didSet {
             self.frameView.layer.cornerRadius = cornerRadius
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 1.0 {
+    @IBInspectable public var borderWidth: CGFloat = 1.0 {
         didSet {
             self.frameView.layer.borderWidth = borderWidth
         }
     }
     
-    @IBInspectable var minWidth: CGFloat = 23 {
+    @IBInspectable public var minWidth: CGFloat = 23 {
         didSet {
             self.updateLayout()
         }
     }
     
-    @IBInspectable var isHiddenIfZero: Bool = false {
+    @IBInspectable public var isHiddenIfZero: Bool = false {
         didSet {
             self.updateHiddenSubviews()
         }
     }
     
-    @IBInspectable var paddingWidth: CGFloat = 14.0 {
+    @IBInspectable public var paddingWidth: CGFloat = 14.0 {
         didSet {
             self.updateLayout()
         }
     }
     
-    @IBInspectable var paddingHeight: CGFloat = 4.0 {
+    @IBInspectable public var paddingHeight: CGFloat = 4.0 {
         didSet {
             self.updateLayout()
         }
     }
     
-    var alignment: Alignment = .center {
+    public var alignment: Alignment = .center {
         didSet {
             self.updateLayout();
         }

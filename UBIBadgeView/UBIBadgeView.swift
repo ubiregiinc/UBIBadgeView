@@ -92,7 +92,11 @@ class UBIBadgeView: UIView {
         }
     }
     
-    @IBInspectable var minWidth: CGFloat = 23
+    @IBInspectable var minWidth: CGFloat = 23 {
+        didSet {
+            self.updateLayout()
+        }
+    }
     
     @IBInspectable var isHiddenIfZero: Bool = false {
         didSet {
@@ -100,8 +104,17 @@ class UBIBadgeView: UIView {
         }
     }
     
-    var paddingWidth: CGFloat = 14.0
-    var paddingHeight: CGFloat = 4.0
+    @IBInspectable var paddingWidth: CGFloat = 14.0 {
+        didSet {
+            self.updateLayout()
+        }
+    }
+    
+    @IBInspectable var paddingHeight: CGFloat = 4.0 {
+        didSet {
+            self.updateLayout()
+        }
+    }
     
     var alignment: Alignment = .center {
         didSet {

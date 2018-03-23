@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A08DC7020649D3900407CD9 /* UBIBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08DC6F20649D3900407CD9 /* UBIBadgeView.swift */; };
 		1AC5147620649A7A006C276B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5147520649A7A006C276B /* AppDelegate.swift */; };
 		1AC5147820649A7A006C276B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5147720649A7A006C276B /* ViewController.swift */; };
 		1AC5147B20649A7A006C276B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC5147920649A7A006C276B /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A08DC6F20649D3900407CD9 /* UBIBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBIBadgeView.swift; sourceTree = "<group>"; };
 		1AC5147220649A7A006C276B /* UBIBadgeViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBIBadgeViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC5147520649A7A006C276B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AC5147720649A7A006C276B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A08DC6E20649D3900407CD9 /* UBIBadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				1A08DC6F20649D3900407CD9 /* UBIBadgeView.swift */,
+			);
+			name = UBIBadgeView;
+			path = ../../UBIBadgeView;
+			sourceTree = "<group>";
+		};
 		1AC5146920649A7A006C276B = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +88,7 @@
 		1AC5147420649A7A006C276B /* UBIBadgeViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				1A08DC6E20649D3900407CD9 /* UBIBadgeView */,
 				1AC5147520649A7A006C276B /* AppDelegate.swift */,
 				1AC5147720649A7A006C276B /* ViewController.swift */,
 				1AC5147920649A7A006C276B /* Main.storyboard */,
@@ -200,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AC5147820649A7A006C276B /* ViewController.swift in Sources */,
+				1A08DC7020649D3900407CD9 /* UBIBadgeView.swift in Sources */,
 				1AC5147620649A7A006C276B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

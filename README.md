@@ -1,2 +1,2 @@
-# UBIBadge
+# UBIBadgeView
 Badge UI for iOS

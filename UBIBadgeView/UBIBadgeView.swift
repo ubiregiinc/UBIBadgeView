@@ -144,14 +144,17 @@ class UBIBadgeView: UIView {
             self.frameView.center = center
             self.label.center = center
         case .left:
-            let position = CGPoint(x: round(center.x + frameSize.width * 0.5), y: center.y)
+            let position = CGPoint(x: center.x + frameSize.width * 0.5, y: center.y)
             self.frameView.center = position
             self.label.center = position
         case .right:
-            let position = CGPoint(x: round(center.x - frameSize.width * 0.5), y: center.y)
+            let position = CGPoint(x: center.x - frameSize.width * 0.5, y: center.y)
             self.frameView.center = position
             self.label.center = position
         }
+        
+        self.frameView.frame = self.roundFrame(self.frameView.frame)
+        self.label.frame = self.roundFrame(self.label.frame)
     }
     
     private func updateHiddenSubviews() {
@@ -162,6 +165,15 @@ class UBIBadgeView: UIView {
             self.frameView.isHidden = false
             self.label.isHidden = false
         }
+    }
+    
+    private func roundFrame(_ rect: CGRect) -> CGRect {
+        return CGRect(x: self.roundPosition(rect.origin.x), y: self.roundPosition(rect.origin.y), width: rect.size.width, height: rect.size.height)
+    }
+    
+    private func roundPosition(_ pos: CGFloat) -> CGFloat {
+        let scale = UIScreen.main.scale
+        return round(pos * scale) / scale
     }
 }
 

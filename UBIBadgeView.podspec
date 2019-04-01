@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = 'UBIBadgeView'
-  s.version       = '0.0.2'
+  s.version       = '0.0.3'
   s.summary       = 'Badge UI for iOS'
   s.homepage      = 'https://github.com/ubiregiinc/UBIBadgeView'
   s.license       = { :type => 'MIT' }
@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
   s.requires_arc  = true
   s.source        = { :git => 'https://github.com/ubiregiinc/UBIBadgeView.git', :tag => s.version.to_s }
   s.source_files  = 'UBIBadgeView/*.swift'
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 end

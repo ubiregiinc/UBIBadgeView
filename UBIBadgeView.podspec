@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = 'UBIBadgeView'
-  s.version       = '0.0.3'
+  s.version       = '0.0.4'
   s.summary       = 'Badge UI for iOS'
   s.homepage      = 'https://github.com/ubiregiinc/UBIBadgeView'
   s.license       = { :type => 'MIT' }

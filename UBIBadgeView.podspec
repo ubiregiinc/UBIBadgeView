@@ -9,5 +9,6 @@ Pod::Spec.new do |s|
   s.requires_arc  = true
   s.source        = { :git => 'https://github.com/ubiregiinc/UBIBadgeView.git', :tag => s.version.to_s }
   s.source_files  = 'UBIBadgeView/*.swift'
+  s.resource_bundles = {'UBIBadgeView' => ['UBIBadgeView/PrivacyInfo.xcprivacy']}
   s.swift_version = '5.0'
 end

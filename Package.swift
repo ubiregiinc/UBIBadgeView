@@ -16,6 +16,10 @@ let package = Package(
         .target(
             name: "UBIBadgeView",
             dependencies: [],
-            path: "UBIBadgeView"),
+            path: "UBIBadgeView",
+            resources: [
+                .process("PrivacyInfo.xcprivacy")
+            ]
+        ),
     ]
 )

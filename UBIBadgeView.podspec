@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.platform      = :ios, '8.0'
   s.requires_arc  = true
   s.source        = { :git => 'https://github.com/ubiregiinc/UBIBadgeView.git', :tag => s.version.to_s }
-  s.source_files  = 'UBIBadgeView/*.{swift,xcprivacy}'
+  s.source_files  = 'UBIBadgeView/*.swift'
+  s.resource_bundles = {'UBIBadgeView' => ['UBIBadgeView/PrivacyInfo.xcprivacy']}
   s.swift_version = '5.0'
 end
